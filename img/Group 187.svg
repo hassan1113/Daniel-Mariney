@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="158" height="158" viewBox="0 0 158 158">
+  <g id="Group_187" data-name="Group 187" transform="translate(-891 -2199)">
+    <g id="Ellipse_40" data-name="Ellipse 40" transform="translate(891 2199)" fill="#f16c54" stroke="#707070" stroke-width="1" opacity="0.38">
+      <circle cx="79" cy="79" r="79" stroke="none"/>
+      <circle cx="79" cy="79" r="78.5" fill="none"/>
+    </g>
+    <g id="Ellipse_39" data-name="Ellipse 39" transform="translate(904 2212)" fill="#f16c54" stroke="#707070" stroke-width="1">
+      <circle cx="66" cy="66" r="66" stroke="none"/>
+      <circle cx="66" cy="66" r="65.5" fill="none"/>
+    </g>
+    <path id="Icon_material-slow-motion-video" data-name="Icon material-slow-motion-video" d="M43.559,31.561,32.334,23.133V56.256l11.225-8.428,10.857-8.134Zm0,0L32.334,23.133V56.256l11.225-8.428,10.857-8.134Zm0,0L32.334,23.133V56.256l11.225-8.428,10.857-8.134ZM36.014,10.509V3.075a36.615,36.615,0,0,0-19.58,8.134l5.226,5.263A29.226,29.226,0,0,1,36.014,10.509ZM16.472,21.661l-5.263-5.226a36.615,36.615,0,0,0-8.134,19.58h7.434A29.226,29.226,0,0,1,16.472,21.661ZM10.509,43.375H3.075a36.615,36.615,0,0,0,8.134,19.58l5.263-5.263A28.957,28.957,0,0,1,10.509,43.375Zm5.925,24.806a36.735,36.735,0,0,0,19.58,8.134V68.88a29.226,29.226,0,0,1-14.353-5.962l-5.226,5.263ZM76.5,39.695a36.859,36.859,0,0,1-32.939,36.62V68.88a29.44,29.44,0,0,0,0-58.371V3.075A36.859,36.859,0,0,1,76.5,39.695Z" transform="translate(929.91 2238.254)" fill="#fff"/>
+  </g>
+</svg>

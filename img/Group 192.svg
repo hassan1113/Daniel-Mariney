@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="188" height="130" viewBox="0 0 188 130">
+  <defs>
+    <filter id="Rectangle_37" x="0" y="0" width="188" height="130" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_192" data-name="Group 192" transform="translate(-1119.5 -2751.5)">
+    <g transform="matrix(1, 0, 0, 1, 1119.5, 2751.5)" filter="url(#Rectangle_37)">
+      <path id="Rectangle_37-2" data-name="Rectangle 37" d="M25,0H136a25,25,0,0,1,25,25v78a0,0,0,0,1,0,0H25A25,25,0,0,1,0,78V25A25,25,0,0,1,25,0Z" transform="translate(8.5 7.5)" fill="#f16c54"/>
+    </g>
+    <g id="Group_191" data-name="Group 191">
+      <text id="_30" data-name="30" transform="translate(1231 2805)" fill="#fff" font-size="40" font-family="Gilroy-SemiBold, Gilroy ☞" font-weight="600" letter-spacing="-0.04em"><tspan x="-45" y="0">30</tspan></text>
+      <text id="years_of_Market_experience" data-name="years of Market 
+experience" transform="translate(1209 2824.5)" fill="#fff" font-size="14" font-family="Gilroy-Medium, Gilroy ☞" font-weight="500"><tspan x="-52" y="0">Years Of Market </tspan><tspan x="-35" y="16">Experience</tspan></text>
+    </g>
+  </g>
+</svg>

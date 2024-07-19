@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&family=Playfair+Display:ital@0;1&display=swap');
+    .ff{
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+    header{
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+    }
+    .h-banner1{
+        background-image: url(img/Group\ 186.png);
+        width: 100%;
+        background-position: center center;
+        /* background-attachment: fixed; */
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+   }
+   .navbar-inverse ul li{
+    display: flex;
+    align-items: center;
+   }
+   .h-banner1 button{
+    width: fit-content;
+   }
+   .h-th{
+    color: white;
+    font-size: 42px;
+   }
+   .navbar-inverse{
+    background-color: transparent;
+    border-color: transparent;
+   }
+   .navbar-inverse .navbar-brand{
+    color: #fff;
+   }
+   .navbar-inverse .nav-item .nav-link{
+    color: #fff;
+   }
+   .navbar-brand{
+    font-size: 30px;
+   }
+
+   .navbar-light .navbar-nav .active > .nav-link{
+    color: #F16C54 !important;
+   }
+   .navbar-light .navbar-nav .nav-link:hover, .navbar-brand:hover{
+    color: #F16C54 !important;
+   }
+
+
+    /* search bar */
+
+    .sear{
+        width: 150px;
+    }
+    .search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border: 1px gainsboro solid;
+  transition-duration: 0.2s;
+  border-radius: 100px;
+}
+
+.textbox {
+  width: 0px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  line-height: 40px;
+  font-size: 15px;
+  background-color: transparent;
+  outline: none;
+  height: 100%;
+  float: left;
+
+  transition-duration: 0.05s;
+}
+
+.search-btn {
+  background-color: transparent;
+  padding: 0px 0px 0px 0px;
+  margin: 0;
+  /* width: 45px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  text-decoration: none;
+  height: 100%;
+  transition-duration: 0.2s;
+  border-radius: 20px;
+}
+
+.search-btn p {
+  padding: 5px 10px;
+  margin: 0px;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.search-bar:hover > .textbox {
+  padding: 0px 8px 0px 8px;
+  width: 100%;
+  transition-duration: 0.2s;
+}
+
+.search-bar:hover > .search-btn {
+  border-left: 0px black solid;
+  transition-duration: 0.2s;
+}
+
+.search-btn {
+  background-color: #60B88D;
+  transition-duration: 0.2s;
+}
+.search-btn:hover > p {
+  color: white;
+  transition-duration: 0.2s;
+}
+.search-bar input::placeholder,.search-bar input::-moz-placeholder{
+    color: white;
+}
+
+    .th{
+        font-size: 30px;
+        text-align: center;
+    }
+    .th1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .cd1{
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 14px 0 rgba(0, 0, 0, 0.19);
+    }
+    .cd1 .card-body{
+        padding: 15px 0px;
+    }
+    .cd1 .card-body p{
+        line-height:20px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .btn1 , .btn2{
+        border-radius: 100px;
+        background-color: #F5F5F5;
+        color: #333333;
+        padding: 1px 8px;
+        font-size: 25px;
+        transition: .2s;
+    }
+    .btn1:hover{
+        color: white;
+        background-color: #F16C54;
+        transition: .2s;
+    }
+    .btnm{
+        background-color: #F16C54;
+        color: white;
+        border-radius: 30px 30px 0px 30px;
+        padding: 8px 10px 6px 15px;
+        
+    }
+    .btnm span{
+        border-radius: 100px;
+        background-color: #4553A0;
+        color: white;
+        padding: 0px 5px;
+        font-size: 20px;
+        margin: 0px 0px 0px 10px;
+    }
+    .btnm p{
+        margin: 0px;
+    }
+    .btnm:hover{
+        color: white !important;
+        transition: .2s !important;
+    }
+   .vid{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   } 
+   .play{
+        position: absolute;
+        width: 120px;
+   }
+   .cd2:hover{
+    background-color: #F16C54;
+    transition: .5s;
+    color: white;;
+   }
+   .banner2{
+        background-image: url(img/shape-1.png);
+        width: 100%;
+        /* background-position: center; */
+        /* background-attachment: fixed; */
+        /* height: 850px; */
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+   }
+   .banner3{
+    background-image: url(img/Group\ 194.png);
+        width: 100%;
+        /* background-position: center; */
+        /* background-attachment: fixed; */
+        /* height: 850px; */
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+   }
+   .banner2 ul {
+    list-style: none;
+    margin-top: 20px;
+   }
+   .banner2 ul li::before{
+        content: "\2022 \00A0";
+        color: #60B88D;
+        font-weight: 900;
+        display: inline-block;
+        width: 1.5em;
+        margin-left: -1.5em;
+        font-size: 25px;
+        line-height: 25px;
+   }
+   .mind{
+    position: absolute;
+    left: -10%;
+    top: 6%;
+    width: 140px;
+   }
+   .client{
+    position: absolute;
+    left: -10%;
+    bottom: 20%;
+    width: 130px;
+   }
+   .cd3{
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: -5px 5px 6px #0DA57424;
+    border: 0;
+   }
+   .cd3 .card-body{
+    padding: 35px 20px;
+   }
+   .date{
+    background-color: #C4C4C4;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+   }
+   .more, .more h6{
+    text-decoration: none !important;
+    color: black;
+    font-weight: 400;
+   }
+   .more img{
+    margin-left: 10px;
+   }
+   footer{
+    background-color: #131313;
+   }
+   footer a{
+    color: white;
+    display: block;
+   }
+   footer a:hover{
+    color: white;
+   }
+   footer .col-md-3 input{
+    background: transparent;
+    border-radius: 20px 20px 0px 20px;
+    padding: 20px;
+    }
+    footer .form-control::placeholder {
+    color: white !important;
+    }
+    .fb{
+        background-color: #3e5c9a;
+        color: white;
+    }
+    .X{
+        background-color: #29a9e1;
+        color: white;
+    }
+    .insta{
+        background-color: #cf506d;
+        color: white;
+    }
+    .in{
+        background-color: #117bb8;
+        color: white;
+    }
+    .yt{
+        background-color: #c3271a;
+        color: white;
+    }
+    footer .col-md-3 .d-flex a{
+        padding: 6px 10px;
+        border-radius: 100px;
+    }
+    footer .col-md-3 .d-flex a:hover{
+        color: white;
+    }
+    .line{
+        background-color: white;
+
+    }
+    @media screen and (max-width:1200px){
+        .banner2 .col-md-12 ul{
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        .banner2 .col-md-12 .btnm{
+            margin: 15px 0px !important;
+        }
+        .mind {
+            position: absolute;
+            left: -10%;
+            top: 6%;
+            width: 120px;
+        }
+        .client {
+            position: absolute;
+            left: -10%;
+            bottom: 20%;
+            width: 110px;
+        }
+    }
+     @media screen and (max-width:991px){
+        .mind {
+            position: absolute;
+            left: -5%;
+            top: 6%;
+            width: 160px;
+        }
+        .client {
+            position: absolute;
+            left: -2%;
+            bottom: 10%;
+            width: 150px;
+        }
+     }
+
+     @media screen and (max-width:767px){
+        .navbar-collapse{
+            color: white !important;
+            background-color: rgba(0, 0, 0, 0.6) !important;
+        }
+        .search-bar{
+            bottom: 6%;
+            left: 26%;
+        }
+        .h-banner1 {
+            background-image: url(img/Group\ 186.png);
+            width: 100%;
+            background-position: center center;
+            background-attachment: fixed;
+            height: 65vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+        }
+        .h-th{
+            font-size: 30px;
+        }
+        .h-banner1 p{
+            font-size: 15px;
+        }
+        .swiper-pagination {
+            display: flex;
+            margin-left: 10px !important;
+            margin-bottom: 10px !important;
+        }
+
+     }
+
+     @media screen and (max-width:430px){
+        .mind {
+            position: absolute;
+            left: 0%;
+            top: 6%;
+            width: 130px;
+        }
+        .client {
+            position: absolute;
+            left: 0%;
+            bottom: 10%;
+            width: 120px;
+        }
+        .search-bar{
+            bottom: 6%;
+            left: 35%;
+        }
+     }
+     @media screen and (max-width:375px){
+        .mind {
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            width: 125px;
+        }
+        .client {
+            position: absolute;
+            left: 0%;
+            bottom: 5%;
+            width: 115px;
+        }
+        .search-bar{
+            bottom: 6%;
+            left: 40%;
+        }
+     }
+
+     .swiper-button-next, .swiper-button-prev{
+        display: none !important;
+     }
+     .swiper-pagination{
+        display: flex;
+        margin-left: 210px;
+        margin-bottom: 30px;
+     }
+     .swiper-pagination-bullet-active{
+        background-color: #F16C54 !important;
+     }
+     .swiper-pagination-bullet{
+        background-color: white;
+        opacity: 1 !important;
+        width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,10px));
+        height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,10px));
+     }
+
+
+</style>
+<body>
+    <header>
+     <div class="container">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light navbar-inverse">
+            <a class="navbar-brand ff" href="#">Daniel Mariney</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link mx-2" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-2" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-2" href="#">How It Works</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-2" href="#">Blogs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-2" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link nopath mt-2 p-0" href="#"><img src="img/NoPath - Copy (19).png" alt="" width="53px"></a>
+                  <a class="nav-link mt-2 p-0" href="#"><img src="img/Group 199.svg" alt="" width="59px"></a>
+                  <li class="nav-item ml-1 sear">
+                    <div class="search-bar ">
+                        <input type="text" class="textbox" placeholder="Search"/>
+                        <a class = "search-btn" href="#">
+                          <p><i class='bx bx-search-alt-2'></i></p>
+                        </a>
+                    </div>
+                </li>
+                </li> 
+                
+              </ul>
+            </div>
+          </nav>
+     </div> 
+    </header>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="h-banner1">
+            <div class="container h-100">
+             <div class="row h-100">
+                 <div class="col-md-6 d-flex justify-content-center h-100 flex-column">
+                     <h1 class="ff h-th">A Strong Image Of Yourself Is Our Success</h1>
+                     <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic autem aliquam illum doloribus inventore corrupti assumenda sapiente, dolorum distinctio mollitia amet cum placeat ducimus quaerat totam impedit dolore aliquid odit.</p>
+                     <button class="btn btnm d-flex"><p>Fix An Appointment</p>  <span><i class='bx bx-right-arrow-alt'></i></span></button>
+                    </div>
+                <div class="col-md-6"></div>
+             </div>
+            </div>
+         </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="h-banner1">
+            <div class="container h-100">
+             <div class="row h-100">
+                 <div class="col-md-6 d-flex justify-content-center h-100 flex-column">
+                     <h1 class="ff h-th">A Strong Image Of Yourself Is Our Success</h1>
+                     <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic autem aliquam illum doloribus inventore corrupti assumenda sapiente, dolorum distinctio mollitia amet cum placeat ducimus quaerat totam impedit dolore aliquid odit.</p>
+                     <button class="btn btnm d-flex"><p>Fix An Appointment</p>  <span><i class='bx bx-right-arrow-alt'></i></span></button>
+                    </div>
+                <div class="col-md-6"></div>
+             </div>
+            </div>
+         </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="h-banner1">
+            <div class="container h-100">
+             <div class="row h-100">
+                 <div class="col-md-6 d-flex justify-content-center h-100 flex-column">
+                     <h1 class="ff h-th">A Strong Image Of Yourself Is Our Success</h1>
+                     <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic autem aliquam illum doloribus inventore corrupti assumenda sapiente, dolorum distinctio mollitia amet cum placeat ducimus quaerat totam impedit dolore aliquid odit.</p>
+                     <button class="btn btnm d-flex"><p>Fix An Appointment</p>  <span><i class='bx bx-right-arrow-alt'></i></span></button>
+                    </div>
+                <div class="col-md-6"></div>
+             </div>
+            </div>
+         </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 0,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+
+
+
+    <!-- Section 1 -->
+    <section>
+      <div class="container pt-5">
+        <h1 class="ff th">What We Do</h1>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam et possimus error<br> officia non fugiat accusamus magni harum eaque, quasi sed recusandae.</p>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 py-2">
+                <div class="card cd1">
+                    <img src="img/Mask Group 2.png" alt="" width="100%">
+                    <div class="card-body">
+                        <h5 class="ff text-center">Stress And Worry</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <div class="text-center">
+                            <button class="btn btn1"><i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+                <div class="card cd1">
+                    <img src="img/Mask Group 3.png" alt="" width="100%">
+                    <div class="card-body">
+                        <h5 class="ff text-center">Family Difficulties</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <div class="text-center">
+                            <button class="btn btn1"><i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+                <div class="card cd1">
+                    <img src="img/Mask Group 4.png" alt="" width="100%">
+                    <div class="card-body">
+                        <h5 class="ff text-center">Grief And Loss</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <div class="text-center">
+                            <button class="btn btn1"><i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 py-2">
+                <div class="card cd1">
+                    <img src="img/Mask Group 5.png" alt="" width="100%">
+                    <div class="card-body">
+                        <h5 class="ff text-center">Life Counseling</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <div class="text-center">
+                            <button class="btn btn1"><i class='bx bx-right-arrow-alt'></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center d-flex justify-content-center pt-5">
+            <button class="btn btnm d-flex"><p>View All Services</p>  <span><i class='bx bx-right-arrow-alt'></i></span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section>
+        <div class="container pt-5">
+          <h1 class="ff th">Watch Our Latest Consultant Video</h1>
+          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam et possimus error<br> officia non fugiat accusamus magni harum eaque, quasi sed recusandae.</p>
+          <div class="vid">
+            <img class="play" src="img/Group 187.svg" alt="">
+            <img src="img/Group 188.png" alt="" width="100%">
+          </div>
+        </div>
+    </section>
+
+    <!--Section 3  -->
+    <section>
+        <div class="banner2">
+            <div class="container pt-5">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 py-2">
+                        <h1 class="ff th1 text-left">Who We Are</h1>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ullam unde deleniti eius ex! Tempore asperiores amet.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ullam unde deleniti eius ex! Tempore asperiores amet.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ullam unde deleniti eius ex! Tempore asperiores amet.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ullam unde deleniti eius ex! Tempore asperiores amet.</li>
+                        </ul>
+                        <button class="btn btnm d-flex my-5"><p>Learn More</p>  <span><i class='bx bx-right-arrow-alt'></i></span></button>
+                    </div>
+                    <div class="col-lg-2 py-2" ></div>
+                    <div class="col-lg-4 col-md-12">
+                        <img src="img/NoPath - Copy (41).png" alt="" width="100%">
+                        <img class="mind" src="img/Group 192.svg" alt="">
+                        <img class="client" src="img/Group 190.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!--Section 4  -->
+    <section>
+        <div class="banner3 my-4 py-3">
+            <div class="container py-5">
+                <h1 class="ff th1 text-center mb-3 text-white">There Is Always A Better Way </h1>
+                <p class="text-center mb-3 text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae exercitationem praesentium perferendis mollitia <br> odit quo neque id obcaecati tempore, vero beatae illum nesciunt blanditiis minus natus veritatis veniam? At, cumque?</p>
+                <h1 class="ff th1 text-center mb-0 text-white">Call Now: +1-123-456-789</h1>            </div>
+        </div>
+    </section>
+
+    <!--Section 5  -->
+    <section>
+        <div class="container pt-4">
+            <h1 class="ff th">Latest Blogs</h1>
+            <p class="text-center mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae exercitationem praesentium perferendis mollitia <br> odit quo neque id obcaecati tempore, vero beatae illum nesciunt blanditiis minus natus veritatis veniam? At, cumque?</p>
+            <div class="row">
+                <div class="col-md-4 py-2">
+                    <div class="card cd3">
+                        <img src="img/Mask Group 8.png" alt="" width="100%">
+                        <div class="card-body">
+                            <span class="date">AUGUST 30,2021</span>
+                            <h5 class="ff mt-3"><b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b></h5>
+                            <img src="img/Rectangle 61.svg" alt="">
+                            <p class="mt-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <a class="d-flex more" href="#"><h6 class="mb-0">MORE DETAILS</h6>  <img src="img/Icon awesome-long-arrow-alt-right.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-2">
+                    <div class="card cd3">
+                        <img src="img/Mask Group 9.png" alt="" width="100%">
+                        <div class="card-body">
+                            <span class="date">AUGUST 30,2021</span>
+                            <h5 class="ff mt-3"><b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b></h5>
+                            <img src="img/Rectangle 61.svg" alt="">
+                            <p class="mt-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <a class="d-flex more" href="#"><h6 class="mb-0">MORE DETAILS</h6>  <img src="img/Icon awesome-long-arrow-alt-right.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-2">
+                    <div class="card cd3">
+                        <img src="img/Mask Group 10.png" alt="" width="100%">
+                        <div class="card-body">
+                            <span class="date">AUGUST 30,2021</span>
+                            <h5 class="ff mt-3"><b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b></h5>
+                            <img src="img/Rectangle 61.svg" alt="">
+                            <p class="mt-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <a class="d-flex more" href="#"><h6 class="mb-0">MORE DETAILS</h6>  <img src="img/Icon awesome-long-arrow-alt-right.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6 -->
+    <section>
+            <div class="container pt-4">
+              <h1 class="ff th">Services from Our Best Psychiatrists</h1>
+              <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam et possimus error<br> officia non fugiat accusamus magni harum eaque, quasi sed recusandae.</p>
+              <div class="row">
+                  <div class="col-lg-3 col-md-6 py-2">
+                      <div class="card cd1 cd2 d-flex align-items-center">
+                          <img class="pt-4 pb-3" src="img/Group 198.png" alt="" width="35%">
+                          <div class="card-body">
+                              <h5 class="ff text-center">Personal Development</h5>
+                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                              <div class="text-center">
+                                  <button class="btn btn2"><i class='bx bx-right-arrow-alt'></i></button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 py-2">
+                      <div class="card cd1 cd2 d-flex align-items-center">
+                          <img class="pt-4 pb-3" src="img/Group 197 copy.png" alt="" width="35%">
+                          <div class="card-body">
+                              <h5 class="ff text-center">Couples Counsellings</h5>
+                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                              <div class="text-center">
+                                  <button class="btn btn2"><i class='bx bx-right-arrow-alt'></i></button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 py-2">
+                      <div class="card cd1 cd2 d-flex align-items-center">
+                          <img class="pt-4 pb-3" src="img/Group 196.png" alt="" width="35%">
+                          <div class="card-body">
+                              <h5 class="ff text-center">Depression Treatment</h5>
+                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                              <div class="text-center">
+                                  <button class="btn btn2"><i class='bx bx-right-arrow-alt'></i></button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 py-2">
+                      <div class="card cd1 cd2 d-flex align-items-center">
+                          <img class="pt-4 pb-3" src="img/Group 195.png" alt="" width="35%">
+                          <div class="card-body">
+                              <h5 class="ff text-center">Relationship Problems</h5>
+                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                              <div class="text-center">
+                                  <button class="btn btn2"><i class='bx bx-right-arrow-alt'></i></button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="text-center d-flex justify-content-center pt-5">
+                  <button class="btn btnm d-flex"><p>Find More Options</p>  <span><i class='bx bx-right-arrow-alt'></i></span></button>
+              </div>
+            </div>
+    </section>
+
+    <footer class="pt-5 pb-4 mt-5">
+        <div class="container">
+            <div class="row pb-5 pt-3">
+                <div class="col-md-3">
+                    <b><h5 class="text-white mt-2 mb-1">About Us</h5></b>
+                    <img class="mb-2 mt-1" src="img/Rectangle 61.svg" alt="">
+                    <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, numquam? Aperiam id eos placeat iure sed.</p>
+                    <div class="d-flex">
+                        <a class="fb" href="#"><i class='bx bxl-facebook' ></i></a>
+                        <a class=" X" href="#"><i class='bx bxl-twitter' ></i></a>
+                        <a class="insta" href="#"><i class='bx bxl-instagram' ></i></a>
+                        <a class=" in" href="#"><i class='bx bxl-linkedin' ></i></a>
+                        <a class="yt" href="#"><i class='bx bxl-youtube' ></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <b><h5 class="text-white mt-2 mb-1">Quick Links</h5></b>
+                    <img class="mb-2 mt-1" src="img/Rectangle 61.svg" alt="">
+                    <a class="mb-1" href="#">Home</a>    
+                    <a class="mb-1" href="#">How It Work</a>       
+                    <a class="mb-1" href="#">About</a>       
+                    <a class="mb-1" href="#">Blogs</a>       
+                    <a href="#">Contact</a>       
+                </div>
+                <div class="col-md-3">
+                    <b><h5 class="text-white mt-2 mb-1">Explore</h5></b>
+                    <img class="mb-2 mt-1" src="img/Rectangle 61.svg" alt="">   
+                    <a class="mb-1" href="#">FAQ's</a>       
+                    <a class="mb-1" href="#">Gallery</a>       
+                    <a class="mb-1" href="#">Privacy Policy</a>       
+                    <a href="#">Term & Condition</a>      
+                </div>
+                <div class="col-md-3">
+                    <b><h5 class="text-white mt-2 mb-1">Newsletter</h5></b>
+                    <img class="mb-2 mt-1" src="img/Rectangle 61.svg" alt="">
+                    <input class="form-control mb-2" type="email" placeholder="Email Address">  
+                    <button class="btn btnm d-flex"><p>Subscribe Now</p>  <span><i class='bx bx-right-arrow-alt'></i></span></button>
+                </div>
+            </div>
+            <hr class="line">
+            <h6 class="text-center text-white mb-0">Copyright &copy; 2022. Daniel Mariney Project. All Rights Reserved</h6   >
+        </div>
+    </footer>
+
+
+<!-- Bootstrap CDN -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</body>
+</html>

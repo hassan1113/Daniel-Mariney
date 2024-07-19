@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="175" height="135" viewBox="0 0 175 135">
+  <defs>
+    <filter id="Rectangle_38" x="0" y="0" width="175" height="135" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.11"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_190" data-name="Group 190" transform="translate(-1101 -3057.5)">
+    <g transform="matrix(1, 0, 0, 1, 1101, 3057.5)" filter="url(#Rectangle_38)">
+      <g id="Rectangle_38-2" data-name="Rectangle 38" transform="translate(8 7)" fill="#fff" stroke="rgba(235,235,235,0.6)" stroke-width="3">
+        <rect width="145" height="105" rx="18" stroke="none"/>
+        <rect x="1.5" y="1.5" width="142" height="102" rx="16.5" fill="none"/>
+      </g>
+    </g>
+    <text id="_10_000" data-name="10,000" transform="translate(1230.624 3151.412)" fill="#60b88d" font-size="33" font-family="Gilroy-SemiBold, Gilroy ☞" font-weight="600" letter-spacing="-0.04em"><tspan x="-95" y="0">10,000</tspan></text>
+    <text id="our_happy_clients" data-name="our 
+happy clients" transform="translate(1230.624 3104.412)" fill="#333" font-size="14" font-family="Gilroy-Medium, Gilroy ☞" font-weight="500"><tspan x="-27" y="0">Our </tspan><tspan x="-90" y="13">Happy Clients</tspan></text>
+    <text id="_" data-name="+" transform="translate(1233.624 3149.412)" fill="#f16c54" font-size="14" font-family="Gilroy-Medium, Gilroy ☞" font-weight="500"><tspan x="0" y="0">+</tspan></text>
+    <g id="Group_172" data-name="Group 172" transform="translate(1102.904 3058.5)">
+      <g id="Group_2" data-name="Group 2" transform="translate(0 0)">
+        <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="13.096" cy="13.096" rx="13.096" ry="13.096" fill="#4553a0"/>
+      </g>
+    </g>
+  </g>
+</svg>
